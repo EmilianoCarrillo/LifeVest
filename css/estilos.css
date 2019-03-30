@@ -93,16 +93,17 @@
 }
 
 * body #BotonesSubirArchivo {
-  width: 80%;
+  width: 60%;
   position: relative;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   margin-top: 70px;
+  background: #707070;
 }
 
 * body #BotonesSubirArchivo #Subir {
-  width: 45%;
+  width: 70%;
   position: absolute;
   color: white;
   background: #E88565;
@@ -115,7 +116,7 @@
 
 * body #BotonesSubirArchivo #FotoTomada {
   background: #E88565;
-  width: 45%;
+  width: 30%;
   height: 50px;
   display: inline-block;
   left: 0px;
