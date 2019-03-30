@@ -194,7 +194,7 @@
 }
 
 * body #BotonesSubirArchivo #FotoTomada {
-  background: #E88565;
+  background: #E24E1B;
   width: 30%;
   height: 50px;
   display: inline-block;
@@ -620,10 +620,12 @@
 
 * body #Out #PersonalOut {
   padding-top: 30px;
+  display: block;
 }
 
 * body #Out #PersonalOut label {
   margin: 5px 0;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
@@ -634,10 +636,12 @@
 
 * body #Out #HistorialOut {
   display: none;
+  font-size: 16px;
 }
 
 * body #Out #HistorialOut label {
   margin: 25px;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {

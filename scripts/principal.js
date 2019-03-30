@@ -29,32 +29,28 @@ var medicamento = document.getElementById('MedicamentoIn').value;
 var fechaInicio = document.getElementById('FechaInicioIn').value;
 var fechaFin = document.getElementById('FechaFinIn').value;
 var clickarchivo = false;
+/*
+$("#Subir").attr("disabled", true);
+*/
 
 function inicio(){
-
-    
-
 
     mostrardatospersonales();
     mostrarhistorial();
     regresarflecha();
 
-    console.log(file);
-    
+    file.addEventListener('click', function(){       
 
-    
-    file.addEventListener('click', function(){
-        alert("hola");
-       
+        /*if(file.files[0] != "" && file.files[0] != undefined){ 
+            console.log(file.files[0]);
+                
+            $("#Subir").attr("disabled", false);
+        }   */ 
 
-        if($("#FotoIn").val()){
-            clickarchivo=true;
-            console.log(clickarchivo);
-            
-        }
-
-          
+        $("#Subir").css("background", "#E24E1B");
     });
+
+
 
     btnregistrar.addEventListener('click', () =>{
         ocultarpaginaprincipal();
@@ -77,7 +73,11 @@ function inicio(){
 
     
     subir.addEventListener("click", ()=>{
-        $("#ContenedorCargar").css("display","block");
+
+            $("#ContenedorCargar").css("display","block");
+        
+       
+
     });
 
     
@@ -121,9 +121,9 @@ function mostrardatospersonales(){
 
 function mostrarhistorial(){
     BtnHistorial.addEventListener('click', ()=>{
+        
         $("#PersonalOut").css("display", "none");
         $("#HistorialOut").css("display", "block");
-
         $("#BtnHistorial").addClass( "seleccionado");
     });
 }
@@ -193,7 +193,9 @@ function regresarflecha(){
     flecha.addEventListener('click', ()=>{
         mostrarinicio();
         $("#Out").css("display", "none");
+        file.files[0]="";
     });
+
 }
 
   

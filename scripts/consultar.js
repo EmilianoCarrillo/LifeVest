@@ -46,7 +46,7 @@ var mostrarInfo = function(key){
 
     var foto = document.getElementById("FotoOut");
     var nombre = document.getElementById("NombreOut");
-    var  edad = document.getElementById("EdadOut");
+    var edad = document.getElementById("EdadOut");
     var telefono = document.getElementById("TelefonoOut");
     var direccion = document.getElementById("DireccionOut");
     var genero = document.getElementById("GeneroOut");
@@ -63,19 +63,29 @@ var mostrarInfo = function(key){
 
     chosenOne.once('value').then(function(snapshot) {
         var finalUser = snapshot.val();
+        console.log(finalUser);
         nombre.innerHTML = finalUser.nombre;
         edad.innerHTML = finalUser.fechaNacimiento;
         telefono.innerHTML = finalUser.telefonosEmergencia.t1.telefono;
         direccion.innerHTML = finalUser.direccion;
         genero.innerHTML = finalUser.sexo;
-        medicamentos.innerHTML = finalUser.medicamentos.nombre;
+        medicamentos.innerHTML = finalUser.medicamentos.m1;
+        if(finalUser.medicamentos.nombre=="")
+            medicamentos.innerHTML="Ninguno";
         tipoSangre.innerHTML = finalUser.tipoSangre;
-        alergias.innerHTML = finalUser.a1;
-        enfermedades = finalUser.enfermedadades.e1;
+        alergias.innerHTML = finalUser.alergias.a1;
+        if(finalUser.alergias.a1=="")
+            alergias.innerHTML="Ninguna";
+        enfermedades.innerHTML = finalUser.enfermedadades.e1;
+        if(finalUser.enfermedadades.e1=="")
+            enfermedades.innerHTML="Ninguna";
         enfermedadesHer.innerHTML = finalUser.enfermedadHereditaria.e1;
+        if(finalUser.enfermedadHereditaria.e1=="")
+            enfermedadesHer.innerHTML="Ninguna";
         fechaInicio.innerHTML = finalUser.fechaInicio;
         fechaFin.innerHTML = finalUser.fechaFin;
-
+        console.log(finalUser.enfermedadades);
+        console.log(finalUser.enfermedadHereditaria);
         // Get image
         var storage = firebase.storage();
         var pathReference = storage.refFromURL('gs://hackpuebla2019.appspot.com/' + key + '/profile');

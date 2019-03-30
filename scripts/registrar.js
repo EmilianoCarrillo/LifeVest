@@ -14,7 +14,14 @@ function registrarPaciente() {
     var fechaNac = document.getElementById('FechaNacIn').value;
     var direccion = document.getElementById('DireccionIn').value;
     var foto = document.getElementById('FotoIn').files[0];
-    var sexo = document.getElementById('SexoMIn');
+    
+    var r1=document.getElementById('SexoMIn');
+    var r2=document.getElementById('SexoFIn');
+    var sexo;
+    if(r1.checked)
+        sexo="M";
+    else
+        sexo="F"; 
     var nombreEm = document.getElementById('NombreEmergenciaIn').value;
     var telEmergencia = document.getElementById('TelEmergenciaIn').value;
     var parentescoEmergencia = document.getElementById('ParentescoEmergenciaIn').value;

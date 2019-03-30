@@ -132,7 +132,7 @@ $escritorio: 950px;
                     padding: 0px;
                     width: 200px;
                     height: 60px;
-                    
+
                 }
 
             }
@@ -221,6 +221,7 @@ $escritorio: 950px;
             right: 0px;
             text-align: center;
 
+
             @include tableta{
                 
                 width: 80%;
@@ -235,7 +236,7 @@ $escritorio: 950px;
         }
  
         #FotoTomada{
-            background: color(naranja);
+            background: #E24E1B;
             width: 30%;
             height: 50px;
             display: inline-block;
@@ -255,6 +256,7 @@ $escritorio: 950px;
                 position: relative;
                 top: 15px;
                 z-index: 9999;
+               
 
 
                 @include tableta{
@@ -544,13 +546,11 @@ $escritorio: 950px;
        }
 
        #Out{
-
            display: none;
            width: 80%;
            position: relative;
            left: 50%;
            transform: translate(-50%);
-
 
            #Regresar{
                font-size: 25px;
@@ -565,8 +565,7 @@ $escritorio: 950px;
                 
                }
            }
-        #Imagen{
-            
+        #Imagen{    
             width: 80%;
             position: relative;
             margin: 20px 0;
@@ -657,9 +656,11 @@ $escritorio: 950px;
            #PersonalOut{  
                
             padding-top: 30px;
+            display: block;
 
                label{
                    margin: 5px 0;
+                   font-size: 16px;
 
                    @include tableta{
                     font-size: 30px;      
@@ -671,9 +672,11 @@ $escritorio: 950px;
 
            #HistorialOut{
                display: none;
+               font-size: 16px;
 
                label{
                    margin: 25px;
+                   font-size: 16px;
 
                    @include tableta{
                     font-size: 30px;      
