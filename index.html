@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/estilos.css">
     <title>LifeVest</title>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
@@ -18,15 +19,17 @@
     </div>
 
     <div id="ContenidoPrincipal">
+        <h1>Proposito</h1>
         <p>Somos una aplicación de ayuda
             para el sector medico con el proposito
             de facilitarle al medico los datos de
             cualquier paciente
         </p>
 
-        <button id="RegistrarPrincipal">Registrar</button>
+        
 
     </div>
+    <button id="RegistrarPrincipal">Registrar</button>
 
     <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
 
@@ -35,12 +38,12 @@
 
         <label id="Nombre" for="nombre">Nombre:</label>
         <br>
-        <input id="NombreIn" type="text" name="nombre" value="Hola">
+        <input id="NombreIn" type="text" name="nombre">
         <br>
 
         <label id="FechaNac" for="fechanac">Fecha De Nacimiento:</label>
         <br>
-        <input id="FechaNacIn" type="date" name="fechanac" placeholder="">
+        <input id="FechaNacIn" type="text" name="fechanac" placeholder="">
         <br>
 
         <label id="Direccion" for="direccion">Direccion:</label>
@@ -50,17 +53,25 @@
 
         <label id="Foto" for="direccion">Ingresa tu foto:</label>
         <br>
-        <input id="FotoIn" type="file">
+        <input id="FotoIn" type="text">
         <br>
 
-        <label id="Sexo" for="sexo">Sexo:</label>
-        <br>
-        <input id="SexoMIn" type="radio" name="masculino" placeholder="">
-        <label  for="masculino">M</label>
-        <br>
-        <input type="radio" name="femenino" placeholder="">
-        <label id="SexoFIn" for="femenino">F</label>
-        <br>
+        <div id="DivSexo">
+
+            <label id="Sexo" for="sexo">Sexo: </label>
+
+            <div id="MasculinoGenero">
+                <input id="SexoMIn" type="radio" name="masculino">
+                <label  for="masculino">M</label>
+            </div>
+
+            <div id="FemeninoGenero">
+                <input type="radio" name="femenino">
+                <label id="SexoFIn" for="femenino">F</label>
+            </div>
+            <br>
+
+        </div>
 
         <h2>Contactos de emergencia</h2>
 
@@ -119,8 +130,8 @@
         <input id="FechaFinIn" type="date" name="fechafin" placeholder="">
         <br>
 
-        <button>Cancelar</button>
-        <button>Siguiente</button>
+        <button id="Cancelar">Cancelar</button>
+        <button id="Guardar">Guardar</button>
 
     </form>
 
@@ -157,6 +168,7 @@
     </div>
 
 </body>
+<script src="scripts/principal.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
 <script>
