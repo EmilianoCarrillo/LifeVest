@@ -17,6 +17,11 @@
   background: #E88565;
 }
 
+* .blur {
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+
 * button {
   cursor: pointer;
 }
@@ -231,7 +236,7 @@
   position: fixed;
   -webkit-transition: all time;
   transition: all time;
-  z-index: 999;
+  z-index: 9999999;
   position: fixed;
   top: 0px;
 }

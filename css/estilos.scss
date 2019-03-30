@@ -51,6 +51,9 @@ $escritorio: 950px;
     background: color(naranja);
    
     }
+    .blur{
+        filter: blur(20px);
+    }
 
     button{
         cursor: pointer;
@@ -281,7 +284,7 @@ $escritorio: 950px;
            width: 100%;
            position: fixed;
            transition: all time;
-           z-index: 999;
+           z-index: 9999999;
            position: fixed;
            top: 0px;
 

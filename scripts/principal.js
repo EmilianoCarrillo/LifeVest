@@ -7,6 +7,7 @@ var btnGuardar = document.getElementById("Guardar");
 var btnCancelar = document.getElementById("Cancelar");
 var BtnPersonal = document.getElementById("BtnPersonal");
 var BtnHistorial = document.getElementById("BtnHistorial");
+var subir = document.getElementById("Subir");
 
 var flecha = document.getElementById("Regresar");
 
@@ -58,6 +59,11 @@ function inicio(){
         mostrarinicio();
         ocultarregistro();
 
+    });
+
+    
+    subir.addEventListener("click", ()=>{
+        $("#ContenedorCargar").css("display","block");
     });
 
     
@@ -173,11 +179,5 @@ function regresarflecha(){
     flecha.addEventListener('click', ()=>{
         mostrarinicio();
         $("#Out").css("display", "none");
-    });
-}
-
-function cargando(){
-    PushSubscription.addEventListener("click", ()=>{
-
     });
 }
