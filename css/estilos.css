@@ -221,6 +221,7 @@
 }
 
 * body #Out {
+  display: none;
   width: 80%;
   position: relative;
   left: 50%;
