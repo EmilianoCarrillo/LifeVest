@@ -27,6 +27,10 @@
   font-size: 14px;
 }
 
+* .seleccionado {
+  background: red;
+}
+
 * body {
   width: 100%;
   height: 100vh;
@@ -172,6 +176,30 @@
   margin: 15px 0px;
 }
 
+* body #FormDatosPaciente #RegistrarFoto {
+  position: relative;
+  width: 100%;
+  height: 85px;
+}
+
+* body #FormDatosPaciente #RegistrarFoto #Fotografia {
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  top: 15px;
+}
+
+* body #FormDatosPaciente #RegistrarFoto #Fotografia i {
+  font-size: 30px;
+}
+
+* body #FormDatosPaciente #RegistrarFoto #Fotografia #FotoIn {
+  width: 100%;
+  height: 100%;
+  background: blue;
+  opacity: 0;
+}
+
 * body #FormDatosPaciente #DivSexo {
   position: relative;
   padding: 0px;
@@ -221,12 +249,17 @@
 }
 
 * body #Out {
-  display: none;
   width: 80%;
   position: relative;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+}
+
+* body #Out #Regresar {
+  font-size: 25px;
+  position: relative;
+  left: -20px;
 }
 
 * body #Out #Imagen {
@@ -269,6 +302,15 @@
   margin: 0px 0;
   background: white;
   border-bottom: 1px solid #707070;
+}
+
+* body #Out .datos h5, * body #Out .datos label {
+  display: inline-block;
+  margin: 20px 0;
+}
+
+* body #Out #PersonalOut {
+  padding-top: 30px;
 }
 
 * body #Out #PersonalOut label {

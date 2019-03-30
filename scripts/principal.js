@@ -101,6 +101,8 @@ function mostrarhistorial(){
     BtnHistorial.addEventListener('click', ()=>{
         $("#PersonalOut").css("display", "none");
         $("#HistorialOut").css("display", "block");
+
+        $("#BtnHistorial").addClass( "seleccionado");
     });
 }
 
@@ -154,3 +156,13 @@ function validar(){
 
 }
 
+var masculino;
+var femenino;
+
+function genero(cadena){    
+    if(cadena=="F"){
+        femenino="Femenino";
+    }else{
+        masculino="Masculino";
+    }
+}

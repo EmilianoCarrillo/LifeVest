@@ -35,23 +35,25 @@
             cualquier paciente
         </p>
 
-        
-
-    </div>
-
-    <div id="BotonesSubirArchivo">
-        <div id="FotoTomada">
-                <label  id="TomarFoto" for=""><i class="fas fa-camera"></i></label>
-                <input id="File" type="file" accept="image/*;capture=camera">
+        <div id="BotonesSubirArchivo">
+                <div id="FotoTomada">
+                        <label  id="TomarFoto" for=""><i class="fas fa-camera"></i></label>
+                        <input id="File" type="file" accept="image/*;capture=camera">
+                    </div>
+                
+                 <button id="Subir">Subir</button>
             </div>
+
         
-         <button id="Subir">Subir</button>
+
     </div>
+
+    
 
     
     <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
 
-    <form id="FormDatosPaciente" action="POST" onsubmit="registrarPaciente()" target="dummyframe">
+    <form id="FormDatosPaciente" action="POST" target="dummyframe">
         <h1>Datos Personales</h1>
 
         <label id="Nombre" for="nombre">Nombre:</label>
@@ -69,10 +71,14 @@
         <input id="DireccionIn" type="text" name="direccion" placeholder="">
         <br>
 
-        <label id="Foto" for="direccion">Ingresa tu foto:</label>
-        <br>
-        <input id="FotoIn" type="file">
-        <br>
+        <div id="RegistrarFoto">
+            <label id="Foto" for="direccion">Ingresa tu foto: </label>
+            <br>
+            <label id="Fotografia" for=""> <i class="fas fa-image"></i>
+                <input id="FotoIn" type="file">
+            </label>
+            <br>
+        </div>
 
         <div id="DivSexo">
 
@@ -90,23 +96,6 @@
             <br>
 
         </div>
-
-        <h2>Contactos de emergencia</h2>
-
-        <label id="NombreEmergencia" for="nombreEmergencia">Nombre:</label>
-        <br>
-        <input id="NombreEmergenciaIn" type="text" name="nombreEmergencia" placeholder="">
-        <br>
-
-        <label id="TelEmergencia" for="telEmergencia">Telefono de Emergencia:</label>
-        <br>
-        <input id="TelEmergenciaIn" type="text" name="telEmergencia" placeholder="">
-        <br>
-
-        <label id="ParentescoEmergencia" for="parentescoEmergencia">Perentesco:</label>
-        <br>
-        <input id="ParentescoEmergenciaIn" type="text" name="parentescoEmergencia" placeholder="">
-        <br>
 
 
         <h2>Historial Medico</h2>
@@ -148,15 +137,34 @@
         <input id="FechaFinIn" type="date" name="fechafin" placeholder="">
         <br>
 
+
+        <h2>Contactos de emergencia</h2>
+
+        <label id="NombreEmergencia" for="nombreEmergencia">Nombre:</label>
+        <br>
+        <input id="NombreEmergenciaIn" type="text" name="nombreEmergencia" placeholder="">
+        <br>
+
+        <label id="TelEmergencia" for="telEmergencia">Telefono de Emergencia:</label>
+        <br>
+        <input id="TelEmergenciaIn" type="text" name="telEmergencia" placeholder="">
+        <br>
+
+        <label id="ParentescoEmergencia" for="parentescoEmergencia">Perentesco:</label>
+        <br>
+        <input id="ParentescoEmergenciaIn" type="text" name="parentescoEmergencia" placeholder="">
+        <br>
+
         <button id="Cancelar">Cancelar</button>
-        <button id="Guardar">Guardar</button>
+        <button onsubmit="registrarPaciente()"  id="Guardar">Guardar</button>
 
     </form>
 
     <!--Muestra los datos obtenidos del usuario-->
-    <!--Desde aqui-->
+
 
    <div id="Out">
+        <i id="Regresar" class="fas fa-arrow-left"></i>
         
         <div id="Imagen">
             <img id="FotoOut" src="IMG/perfil.png" alt="">
@@ -170,40 +178,70 @@
         <button id="BtnHistorial">Historial</button>
  
         <div id="PersonalOut">
-            <h5>Telefono: </h5>
-            <label id="TelefonoOut" for="">7351072718</l3abel>
-            <h5>Direccion: </h5>
-            <label id="DireccionOut" for="">Sanmiguel 633</label>
-            <h5>Sexo: </h5>
-            <label id="GeneroOut" for="">F</label>
+
+            <div class="datos">
+                <h5>Telefono: </h5>
+                <label id="TelefonoOut" for="">7351072718</l3abel>
+            </div>
+
+            <div class="datos">
+                <h5>Direccion: </h5>
+                <label id="DireccionOut" for="">Sanmiguel 633</label>
+            </div>
+
+            <div class="datos">
+                <h5>Sexo: </h5>
+                <label id="GeneroOut" for="">F</label>
+            </div>
+            
  
         </div>
  
         <div id="HistorialOut">
 
-            <h5>Tipo de Sangre:</h5>
-            <label id="TipoSangreOut" for="">A+</label>
+            <div class="datos">
+                <h5>Tipo de Sangre:</h5>
+                <label id="TipoSangreOut" for="">A+</label>
+            </div>
 
-            <h5>Alergias: </h5>
-            <label id="AlergiasOut" for="">Ninguna</label>
-            <h5>Enfermedades</h5>
-            <label id="EnfermedadesOut" for="">Ninguna</label>
-            <h5>Enfermedades Hereditarias</h5>
-            <label id="EnfermedadesHerOut" for="">Diabetes</label>
-            <h5>Medicamentos</h5>
-            <label id="Medicamentos" for="">Ninguna</label>
+            <div class="datos">
+                <h5>Alergias: </h5>
+                <label id="AlergiasOut" for="">Ninguna</label>
+            </div>
 
-            <h5>Fecha de Inicio</h5> 
-            <label id="FechaInicioOut" for=""></label>
+            <div class="datos">
+                <h5>Enfermedades</h5>
+                <label id="EnfermedadesOut" for="">Ninguna</label>
+            </div>
 
-            <h5>Fecha Final</h5>
-            <label id="FechaFinOut" for=""></label>
+            <div class="datos"></div>
+                <h5>Enfermedades Hereditarias</h5>       
+                <label id="EnfermedadesHerOut" for="">Diabetes</label>
+            </div>
+
+            <div class="datos">
+                <h5>Medicamentos</h5>
+                <label id="Medicamentos" for="">Ninguna</label>
+            </div>
+
+            <div class="datos">
+                <h5>Fecha de Inicio</h5> 
+                <label id="FechaInicioOut" for=""></label>
+            </div>
+
+            <div class="datos">
+                <h5>Fecha Final</h5>
+                <label id="FechaFinOut" for=""></label>
+            </div>
+
+            
+           
+            
  
         </div>
  
     </div>
 
-    <!--Hasta aqui-->
 
 </body>
 <script src="scripts/principal.js"></script>
