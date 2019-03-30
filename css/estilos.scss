@@ -91,7 +91,16 @@ $escritorio: 950px;
            width: 100%;
            z-index: 9999;
 
+           @include escritorio{
+               width: 100%;
+           }
+
            header{
+
+            @include escritorio{
+                width: 100%;
+                height: 60px;
+            }
                
                width: 100%;
                height: 60px;
@@ -116,6 +125,14 @@ $escritorio: 950px;
                     padding: 20;
                     padding: 23px 0px;
                     font-size: 25px;
+                }
+
+                @include escritorio{
+                    background: red;
+                    padding: 0px;
+                    width: 200px;
+                    height: 60px;
+                    
                 }
 
             }
@@ -377,7 +394,7 @@ $escritorio: 950px;
                background: none;
                border-bottom: 2px solid color(naranja);
                margin: 15px 0px;
-               font-size: 25px;
+               font-size: 15px;
            }
 
            #RegistrarFoto{

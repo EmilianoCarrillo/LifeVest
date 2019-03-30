@@ -28,21 +28,33 @@ var enfermedadHereditaria = document.getElementById('EnfermedadHereditariaIn').v
 var medicamento = document.getElementById('MedicamentoIn').value;
 var fechaInicio = document.getElementById('FechaInicioIn').value;
 var fechaFin = document.getElementById('FechaFinIn').value;
-
-
+var clickarchivo = false;
 
 function inicio(){
 
-    var bandera = validar();
-
-    console.log(bandera);
     
+
 
     mostrardatospersonales();
     mostrarhistorial();
     regresarflecha();
-    cursor();
 
+    console.log(file);
+    
+
+    
+    file.addEventListener('click', function(){
+        alert("hola");
+       
+
+        if($("#FotoIn").val()){
+            clickarchivo=true;
+            console.log(clickarchivo);
+            
+        }
+
+          
+    });
 
     btnregistrar.addEventListener('click', () =>{
         ocultarpaginaprincipal();
@@ -183,13 +195,8 @@ function regresarflecha(){
         $("#Out").css("display", "none");
     });
 }
-function cursor(){
-    $("#Mensaje").animate({
-        margin: '0'
+
+  
+    
 
 
-    }, 400, function(){
-        $("Pointer").css("font-size", "40px");
-    });
-
-}
