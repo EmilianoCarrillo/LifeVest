@@ -8,6 +8,7 @@ var btnCancelar = document.getElementById("Cancelar");
 var BtnPersonal = document.getElementById("BtnPersonal");
 var BtnHistorial = document.getElementById("BtnHistorial");
 var subir = document.getElementById("Subir");
+var file = document.getElementById("File");
 
 var flecha = document.getElementById("Regresar");
 
@@ -40,6 +41,7 @@ function inicio(){
     mostrardatospersonales();
     mostrarhistorial();
     regresarflecha();
+    cursor();
 
 
     btnregistrar.addEventListener('click', () =>{
@@ -180,4 +182,14 @@ function regresarflecha(){
         mostrarinicio();
         $("#Out").css("display", "none");
     });
+}
+function cursor(){
+    $("#Mensaje").animate({
+        margin: '0'
+
+
+    }, 400, function(){
+        $("Pointer").css("font-size", "40px");
+    });
+
 }

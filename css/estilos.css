@@ -228,6 +228,24 @@
   height: 100%;
 }
 
+* body #Mensaje {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  left: 50%;
+  margin: 100%;
+}
+
+* body #Mensaje i {
+  font-size: 25px;
+}
+
+* body #Mensaje h3 {
+  font-size: 10px;
+  display: none;
+}
+
 * body #ContenedorCargar {
   display: none;
   background-color: rgba(250, 240, 245, 0.9);
@@ -236,7 +254,7 @@
   position: fixed;
   -webkit-transition: all time;
   transition: all time;
-  z-index: 9999999;
+  z-index: 9999;
   position: fixed;
   top: 0px;
 }
@@ -250,7 +268,7 @@
   border-radius: 100%;
   margin: auto;
   top: 40%;
-  z-index: 999;
+  z-index: 99999;
   -webkit-animation: girar 1s linear infinite;
           animation: girar 1s linear infinite;
 }
