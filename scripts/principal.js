@@ -13,7 +13,9 @@ function inicio(){
     });
 
     btnGuardar.addEventListener('click', ()=>{
+        validarcampos();
 
+        
 
     });
 
@@ -49,5 +51,39 @@ function mostrarinicio(){
 
 function ocultarregistro(){
     $("#FormDatosPaciente").css("display", "none");
+}
 
+function validarcampos(){
+    $("#FormDatosPaciente").validate({
+
+        rules:{
+            nombre: 'required',
+            fechanac:{
+                requerided: true,
+                date: true
+            },
+            direccion:{
+                requerided: true,
+                minlenght:10,
+                maxlenght:100
+            },
+
+        },
+        messages:{
+            nombre:{
+                requerided: "Campo obligatorio",
+            },
+            fechanac:{
+                requerided: "Campo obligatorio",
+                date: "Ingrese una fecha valida"
+            },
+            direccion:{
+                requerided: "Campo Obligatorio",
+                minlenght: "Ingrese una direccion valida",
+                maxlenght: "Ingrese menos caracteres"
+            },
+
+        }
+
+    });
 }

@@ -6,6 +6,16 @@
   color: #707070;
 }
 
+* #FormDatosPaciente label.error {
+  color: red;
+  font-size: 14px;
+}
+
+* #FormDatosPaciente input.error {
+  color: green;
+  font-size: 14px;
+}
+
 * body {
   width: 100%;
   height: 100vh;
@@ -135,9 +145,5 @@
   border: none;
   color: white;
   background: #E88565;
-}
-
-* body #Out {
-  display: none;
 }
 /*# sourceMappingURL=estilos.css.map */

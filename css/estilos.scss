@@ -40,6 +40,18 @@ $escritorio: 950px;
    font-size: 16px;
    color: color(gris);
 
+#FormDatosPaciente label.error{
+    color: red;
+    font-size: 14px;
+
+}
+
+#FormDatosPaciente input.error{
+    color: green;
+    font-size: 14px;
+
+}
+
 
    body{
        width: 100%;
@@ -177,7 +189,7 @@ $escritorio: 950px;
        }
 
        #Out{
-           display: none;
+           
        }
 
 
