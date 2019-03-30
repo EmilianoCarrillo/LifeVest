@@ -40,6 +40,19 @@ $escritorio: 950px;
    font-size: 16px;
    color: color(gris);
 
+   .btn{
+    position: relative;
+    width: 40%;
+    height: 50px;
+    margin: 50px 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: color(naranja);
+   
+}
+   
+
 #FormDatosPaciente label.error{
     color: red;
     font-size: 14px;
@@ -53,6 +66,8 @@ $escritorio: 950px;
 }
 
 
+
+
    body{
        width: 100%;
        height: 100vh;
@@ -60,6 +75,28 @@ $escritorio: 950px;
 
        #Principal{
            width: 100%;
+
+           header{
+               
+               width: 100%;
+               height: 60px;
+
+               #RegistrarPrincipal{
+                color: color(gris);
+                width: 90px;
+                float: right;
+                text-align: center;
+                height: 5px;
+                padding: 20px 0px;
+                font-size: 14px;
+                list-style: none;
+                margin: 0px 10px;
+                border-bottom: 1px solid color(gris);
+
+            }
+
+               
+           }
 
            img{
                width: 100%;
@@ -93,21 +130,61 @@ $escritorio: 950px;
            p{
                margin: 15px 0px;
                font-size: 14px;
+               margin-bottom: 40px;
            }
        }
 
-       #RegistrarPrincipal{
-           width: 50%;
-           height: 50px;
+       
+       #BotonesSubirArchivo{
+           width: 80%;
            position: relative;
            left: 50%;
            transform: translate(-50%);
-           margin: 100px 0;
-           background: color(naranja);
-           border: 0px;
-           color: white;
-           border-radius: 5px;
+           margin-top: 70px; 
+           
+
+        #Subir{
+            width: 45%;        
+            position: absolute;
+            color: white;
+            background: color(naranja);
+            border: none;
+            border-radius: 3px;
+            height: 50px;
+            display: inline-block;
+            right: 0px;
+
+        }
+ 
+        #FotoTomada{
+            background: color(naranja);
+            width: 45%;
+            height: 50px;
+            display: inline-block;
+            left: 0px;
+            text-align: center;
+            
+            #TomarFoto{
+                color: white;
+                text-align: center;
+                position: relative;
+                top: 15px;
+
+                i{
+                    color: white;
+                }
+            }
+            #File{
+                width: 100%;
+                opacity: 0;
+            }
+ 
+ 
+        }
+
        }
+
+       
 
        #FormDatosPaciente{
            display: none;
