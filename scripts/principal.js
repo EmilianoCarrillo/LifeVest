@@ -6,7 +6,9 @@ var btnregistrar = document.getElementById("RegistrarPrincipal");
 var btnGuardar = document.getElementById("Guardar");
 var btnCancelar = document.getElementById("Cancelar");
 var BtnPersonal = document.getElementById("BtnPersonal");
-var BtnHistorial = document.getElementById("BtnHistorial")
+var BtnHistorial = document.getElementById("BtnHistorial");
+
+var flecha = document.getElementById("Regresar");
 
 //Datos del Formulario
 var nombre = document.getElementById('NombreIn').value;
@@ -36,20 +38,20 @@ function inicio(){
 
     mostrardatospersonales();
     mostrarhistorial();
+    regresarflecha();
+
 
     btnregistrar.addEventListener('click', () =>{
         ocultarpaginaprincipal();
         mostrarregistro();
     });
 
+
     
 
     btnGuardar.addEventListener('click', ()=>{
         console.log(bandera);
-        
-
-        
-
+    
     });
 
     btnCancelar.addEventListener('click', ()=>{
@@ -165,4 +167,11 @@ function genero(cadena){
     }else{
         masculino="Masculino";
     }
+}
+
+function regresarflecha(){
+    flecha.addEventListener('click', ()=>{
+        mostrarinicio();
+        $("#Out").css("display", "none");
+    });
 }
