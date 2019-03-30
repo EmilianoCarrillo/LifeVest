@@ -2,11 +2,7 @@ var subscriptionKey = "a5fa1fd8be1745b38b157fb8f08c9c47";
 function getFaceAlike(key, source1,source2, callback){
   var uriBase="https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect";
   var params = {
-      "returnFaceId": "true",
-      "returnFaceLandmarks": "false",
-      "returnFaceAttributes":
-          "age,gender,headPose,smile,facialHair,glasses,emotion," +
-          "hair,makeup,occlusion,accessories,blur,exposure,noise"
+      "returnFaceId": "true"
   };
   $.ajax({
       url: uriBase + "?" + $.param(params),
@@ -50,9 +46,15 @@ function getFaceAlike(key, source1,source2, callback){
                   data: '{"faceId1":"' + id_1 + '", "faceId2":"' + id_2 + '"}',
               })
               .done(function(data3) {
-                  if(data3.isIdentical){
-                    callback(key, data3);
-                  }
+                    if(data3.isIdentical==true)
+                    {
+                        if(data3.confidence>maxConf){
+                            maxConf=data3.confidence;
+                            respuesta=key;
+                            console.log(respuesta);
+                            callback(respuesta);
+                        }
+                    }
               })
               .fail(function(jqXHR, textStatus, errorThrown) {
                   // Display error message.

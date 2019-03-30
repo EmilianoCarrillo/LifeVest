@@ -1,4 +1,3 @@
-
 var subirBoton = document.getElementById("Subir");
 
 subirBoton.addEventListener('click', function(){
@@ -11,26 +10,39 @@ subirBoton.addEventListener('click', function(){
     uploadPhoto(fotoSubida, id, path);
 });
 
-function comparePhotos(tryImg){
+maxConf=-1;
+respuesta=$.Deferred();
+
+var comparePhotos = function (tryImg){
     var photosRef = firebase.database().ref('pacientes/');
 
     photosRef.once('value', function(snapshot) {
+
+        maxConf=-1;
+        respuesta=$.Deferred();
+
         snapshot.forEach(function(childSnapshot) {
           
             var childKey = childSnapshot.key;
             var childData = childSnapshot.val();
             var profileImg = childData.img;
           
-            getFaceAlike(childKey, tryImg, profileImg, mostrarInfo);
+            
 
+            getFaceAlike(childKey, tryImg, profileImg, mostrarInfo)
             ocultarpaginaprincipal();
             document.getElementById('Out').style.display = "block";
 
+            
+
         });
     });
+    return respuesta;
 }
 
-function mostrarInfo(key, data){
+var mostrarInfo = function(key){
+
+    console.log(key);
 
     var foto = document.getElementById("FotoOut");
     var nombre = document.getElementById("NombreOut");
@@ -68,11 +80,9 @@ function mostrarInfo(key, data){
         var storage = firebase.storage();
         var pathReference = storage.refFromURL('gs://hackpuebla2019.appspot.com/' + key + '/profile');
 
-        console.log('gs://hackpuebla2019.appspot.com/' + key + '/profile');
-
         pathReference.getDownloadURL().then(function(url) {
             foto.src = url;
-            console.log(pathReference);
+            document.getElementById('ContenedorCargar').style.display = "none";
         }).catch(function(error) {
             console.log(error);
         });
