@@ -18,8 +18,9 @@
 }
 
 * .blur {
-  -webkit-filter: blur(20px);
-          filter: blur(20px);
+  background-color: #e88465;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
 
 * button {
