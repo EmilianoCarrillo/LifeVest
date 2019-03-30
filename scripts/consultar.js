@@ -1,22 +1,3 @@
-// firebase.database().ref('/pacientes/p1/nombre').once('value').then(function(snapshot) {
-//     document.getElementById('title').innerHTML = snapshot.val();
-// });
-
-
-
-// // Get image
-// var storage = firebase.storage();
-// var pathReference = storage.ref('Emiliano Carrillo Moncayo/profile.jpg');
-// var httpsReference = storage.refFromURL('https://firebasestorage.googleapis.com/v0/b/hackpuebla2019.appspot.com/o/Emiliano%20Carrillo%20Moncayo%2Fprofile.jpg?alt=media&token=1125b6e4-cbbf-44b6-9e38-661f89f85255');
-
-
-// httpsReference.getDownloadURL().then(function(url) {
-//     var img = document.getElementById('myImg');
-//     img.src = url;
-//   }).catch(function(error) {
-//     console.log(error);
-//   });
-
 
 var subirBoton = document.getElementById("Subir");
 
@@ -40,14 +21,63 @@ function comparePhotos(tryImg){
             var childData = childSnapshot.val();
             var profileImg = childData.img;
           
-            var data3 = getFaceAlike(tryImg, profileImg);
-            console.log(data3);
+            getFaceAlike(childKey, tryImg, profileImg, mostrarInfo);
 
             ocultarpaginaprincipal();
             document.getElementById('Out').style.display = "block";
 
         });
     });
+}
+
+function mostrarInfo(key, data){
+
+    var foto = document.getElementById("FotoOut");
+    var nombre = document.getElementById("NombreOut");
+    var  edad = document.getElementById("EdadOut");
+    var telefono = document.getElementById("TelefonoOut");
+    var direccion = document.getElementById("DireccionOut");
+    var genero = document.getElementById("GeneroOut");
+    var medicamentos = document.getElementById("MedicamentosOut");
+    var tipoSangre = document.getElementById("TipoSangreOut");
+    var alergias = document.getElementById("AlergiasOut");
+    var enfermedades = document.getElementById("EnfermedadesOut");
+    var enfermedadesHer = document.getElementById("EnfermedadesHerOut");
+    var fechaInicio = document.getElementById("FechaInicioOut");
+    var fechaFin = document.getElementById("FechaFinOut");
+
+
+    var chosenOne = database.ref('/pacientes/' + key);
+
+    chosenOne.once('value').then(function(snapshot) {
+        var finalUser = snapshot.val();
+        nombre.innerHTML = finalUser.nombre;
+        edad.innerHTML = finalUser.fechaNacimiento;
+        telefono.innerHTML = finalUser.telefonosEmergencia.t1.telefono;
+        direccion.innerHTML = finalUser.direccion;
+        genero.innerHTML = finalUser.sexo;
+        medicamentos.innerHTML = finalUser.medicamentos.nombre;
+        tipoSangre.innerHTML = finalUser.tipoSangre;
+        alergias.innerHTML = finalUser.a1;
+        enfermedades = finalUser.enfermedadades.e1;
+        enfermedadesHer.innerHTML = finalUser.enfermedadHereditaria.e1;
+        fechaInicio.innerHTML = finalUser.fechaInicio;
+        fechaFin.innerHTML = finalUser.fechaFin;
+
+        // Get image
+        var storage = firebase.storage();
+        var pathReference = storage.refFromURL('gs://hackpuebla2019.appspot.com/' + key + '/profile');
+
+        console.log('gs://hackpuebla2019.appspot.com/' + key + '/profile');
+
+        pathReference.getDownloadURL().then(function(url) {
+            foto.src = url;
+            console.log(pathReference);
+        }).catch(function(error) {
+            console.log(error);
+        });
+    });
+
 }
 
 

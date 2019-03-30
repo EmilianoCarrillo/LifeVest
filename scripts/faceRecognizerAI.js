@@ -1,5 +1,5 @@
 var subscriptionKey = "a5fa1fd8be1745b38b157fb8f08c9c47";
-function getFaceAlike(source1,source2){
+function getFaceAlike(key, source1,source2, callback){
   var uriBase="https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect";
   var params = {
       "returnFaceId": "true",
@@ -50,7 +50,9 @@ function getFaceAlike(source1,source2){
                   data: '{"faceId1":"' + id_1 + '", "faceId2":"' + id_2 + '"}',
               })
               .done(function(data3) {
-                  console.log(data3, source1, source2);
+                  if(data3.isIdentical){
+                    callback(key, data3);
+                  }
               })
               .fail(function(jqXHR, textStatus, errorThrown) {
                   // Display error message.
