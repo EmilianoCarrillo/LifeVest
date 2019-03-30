@@ -5,7 +5,7 @@ $colores: (
 );
 
 $celular: 480px;
-$tableta: 769px;
+$tableta: 768px;
 $escritorio: 950px;
 
 
@@ -50,7 +50,11 @@ $escritorio: 950px;
     color: white;
     background: color(naranja);
    
-}
+    }
+
+    button{
+        cursor: pointer;
+    }
    
 
 #FormDatosPaciente label.error{
@@ -98,12 +102,21 @@ $escritorio: 950px;
                 margin: 0px 10px;
                 border-bottom: 1px solid color(gris);
 
+                @include tableta{
+                    width: 200px;
+                    height: 10px;
+                    padding: 20;
+                    padding: 23px 0px;
+                    font-size: 25px;
+                }
+
             }
 
                
            }
 
            img{
+             
                width: 100%;
            }
 
@@ -129,13 +142,26 @@ $escritorio: 950px;
            transform: translate(-50%);
            margin: 30px 0px; 
 
+           
+
            h1{
                text-align: center;
+               @include tableta{
+                font-size: 30px;
+                     
+             } 
            }
            p{
                margin: 15px 0px;
                font-size: 14px;
                margin-bottom: 40px;
+
+               @include tableta{
+                font-size: 25px;
+                     
+             } 
+
+                
            }
        }
 
@@ -145,8 +171,15 @@ $escritorio: 950px;
            position: relative;
            left: 50%;
            transform: translate(-50%);
-           margin-top: 70px; 
-           background: #707070;
+           margin-top: 70px;
+
+           @include tableta{
+              
+               width: 80%;
+               height: 90px;
+               margin-top: 100px;
+        } 
+           
            
 
         #Subir{
@@ -159,6 +192,18 @@ $escritorio: 950px;
             height: 50px;
             display: inline-block;
             right: 0px;
+            text-align: center;
+
+            @include tableta{
+                
+                width: 80%;
+                height: 100%;
+                font-size: 30px;
+               
+                text-align: center;
+         } 
+
+
 
         }
  
@@ -169,20 +214,47 @@ $escritorio: 950px;
             display: inline-block;
             left: 0px;
             text-align: center;
+
+            @include tableta{      
+                width: 80%;
+                height: 100%;
+                
+                position: relative;
+            } 
             
             #TomarFoto{
                 color: white;
                 text-align: center;
                 position: relative;
                 top: 15px;
+                z-index: 9999;
+
+
+                @include tableta{
+                    position: absolute;
+                  
+                    width: 30%;
+                    height: 100%;
+                    left: 0px;
+                    top: 0px;
+                    font-size: 50px;
+                    text-align: center;
+                } 
 
                 i{
                     color: white;
+
+                    @include tableta{
+                        font-size: 30px;
+                        text-align: center;
+                 } 
+
                 }
             }
             #File{
                 width: 100%;
                 opacity: 0;
+               
             }
  
  
@@ -199,14 +271,24 @@ $escritorio: 950px;
            left: 50%;
            transform: translate(-50%);
            margin: 20px 0;
+           
 
            h1{
                text-align: center;
                margin-bottom: 30px;
+
+               @include tableta{
+                font-size: 30px;
+               }
            }
            label{
                position: relative;
                margin: 10px 0;
+
+               @include tableta{
+                    font-size: 25px;
+                    margin: 15px 0;
+               }
                
                
            }
@@ -220,6 +302,7 @@ $escritorio: 950px;
                background: none;
                border-bottom: 2px solid color(naranja);
                margin: 15px 0px;
+               font-size: 25px;
            }
 
            #RegistrarFoto{
@@ -236,13 +319,23 @@ $escritorio: 950px;
 
                    i{
                        font-size: 30px;
+
+                       @include tableta{
+                        font-size: 50px;
+                        
+                       }
                    }
 
                    #FotoIn{
                         width: 100%;
                         height: 100%;
-                        background: blue;
+                        
                         opacity: 0;
+
+                        @include tableta{
+                            position: absolute;
+                            top: 0px;
+                           }
                         
                    }
                }
@@ -253,6 +346,13 @@ $escritorio: 950px;
                position: relative;
                padding: 0px;
                margin: 0px;
+
+               @include tableta{
+                font-size: 30px;
+                position: relative;
+                top: -20px;
+                
+               }
                
 
                #MasculinoGenero{
@@ -260,11 +360,25 @@ $escritorio: 950px;
                    width: 40%;
                    display: inline-block;
                    top: 5px;
+
+                   @include tableta{
+                    font-size: 30px;
+                    position: relative;
+                    top: 0px;
+                    
+                   }
                    
                    label{           
                        position: absolute;
                        top: 0px;
                        left: 25px;
+
+                       @include tableta{
+                        font-size: 30px;
+                        position: relative;
+                       
+                        
+                       }
                    }
                }
 
@@ -274,11 +388,30 @@ $escritorio: 950px;
                    display: inline-block;
                    top: 5px;
 
+                   @include tableta{
+                    font-size: 30px;
+                    position: relative;
+                    top: 0px;
+                    
+                   }
+                   #SexoMIn{
+                       width: 100px;
+                       height: 100px;;
+                       background: red;
+                   }
+
                    label{
                      
                        position: absolute;
                        top: 0px;
                        left: 25px;
+
+                       @include tableta{
+                        font-size: 30px;
+                        position: relative;
+                       
+                        
+                       }
 
                    }
                }
@@ -289,6 +422,10 @@ $escritorio: 950px;
             h2{
                 text-align: center;
                 margin: 40px 0;
+                @include tableta{
+                    font-size: 30px;
+                    border-top:50px; 
+                }
             }
 
             button{
@@ -300,6 +437,13 @@ $escritorio: 950px;
                 border: none;
                 color: white;
                 background: color(naranja);
+
+                @include tableta{
+                    width: 45%; 
+                    height: 70px;
+                    font-size: 25px;
+
+                }
                
             }
 
@@ -315,10 +459,19 @@ $escritorio: 950px;
            left: 50%;
            transform: translate(-50%);
 
+
            #Regresar{
                font-size: 25px;
                position: relative;
                left: -20px;
+               cursor: pointer;
+
+               @include tableta{
+                font-size: 50px;
+                position: relative;
+                top: 0px;
+                
+               }
            }
         #Imagen{
             
@@ -328,6 +481,13 @@ $escritorio: 950px;
             margin-bottom: 30px;
             left: 50%;
             transform: translate(-50%);
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%); 
+
+            @include tableta{
+                width: 65%;
+                
+               }
 
             img{
                 width: 100%;
@@ -339,9 +499,19 @@ $escritorio: 950px;
                text-align: center;
                margin: 0;
                font-size: 20px;
+
+               @include tableta{
+                font-size: 40px;      
+                
+               }
            }
            #EdadOut{
                margin-bottom: 40px;
+
+               @include tableta{
+                font-size: 40px;      
+                
+               }
            }
 
            label{
@@ -349,6 +519,11 @@ $escritorio: 950px;
                 text-align: left;
                 display: block;
                 margin: 20px 0px;
+
+                @include tableta{
+                    font-size: 30px;      
+                    
+                   }
                 
 
            }
@@ -362,6 +537,11 @@ $escritorio: 950px;
                 margin: 0px 0;
                 background: white;
                 border-bottom: 1px solid color(gris); 
+
+                @include tableta{
+                    font-size: 30px;      
+                    
+                   }
                         
                 
            }
@@ -373,6 +553,12 @@ $escritorio: 950px;
                h5,label{
                    display: inline-block;
                    margin: 20px 0;
+
+                   @include tableta{
+                    font-size: 30px;  
+                    margin: 30px 0px;    
+                    
+                   }
                }
            }
 
@@ -383,6 +569,11 @@ $escritorio: 950px;
                label{
                    margin: 5px 0;
 
+                   @include tableta{
+                    font-size: 30px;      
+                    
+                   }
+
                }
            }
 
@@ -391,6 +582,11 @@ $escritorio: 950px;
 
                label{
                    margin: 25px;
+
+                   @include tableta{
+                    font-size: 30px;      
+                    
+                   }
                }
            }
 

@@ -17,6 +17,10 @@
   background: #E88565;
 }
 
+* button {
+  cursor: pointer;
+}
+
 * #FormDatosPaciente label.error {
   color: red;
   font-size: 14px;
@@ -59,6 +63,16 @@
   border-bottom: 1px solid #707070;
 }
 
+@media (min-width: 768px) {
+  * body #Principal header #RegistrarPrincipal {
+    width: 200px;
+    height: 10px;
+    padding: 20;
+    padding: 23px 0px;
+    font-size: 25px;
+  }
+}
+
 * body #Principal img {
   width: 100%;
 }
@@ -90,10 +104,22 @@
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  * body #ContenidoPrincipal h1 {
+    font-size: 30px;
+  }
+}
+
 * body #ContenidoPrincipal p {
   margin: 15px 0px;
   font-size: 14px;
   margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  * body #ContenidoPrincipal p {
+    font-size: 25px;
+  }
 }
 
 * body #BotonesSubirArchivo {
@@ -103,7 +129,14 @@
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   margin-top: 70px;
-  background: #707070;
+}
+
+@media (min-width: 768px) {
+  * body #BotonesSubirArchivo {
+    width: 80%;
+    height: 90px;
+    margin-top: 100px;
+  }
 }
 
 * body #BotonesSubirArchivo #Subir {
@@ -116,6 +149,16 @@
   height: 50px;
   display: inline-block;
   right: 0px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  * body #BotonesSubirArchivo #Subir {
+    width: 80%;
+    height: 100%;
+    font-size: 30px;
+    text-align: center;
+  }
 }
 
 * body #BotonesSubirArchivo #FotoTomada {
@@ -127,15 +170,43 @@
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  * body #BotonesSubirArchivo #FotoTomada {
+    width: 80%;
+    height: 100%;
+    position: relative;
+  }
+}
+
 * body #BotonesSubirArchivo #FotoTomada #TomarFoto {
   color: white;
   text-align: center;
   position: relative;
   top: 15px;
+  z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  * body #BotonesSubirArchivo #FotoTomada #TomarFoto {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    font-size: 50px;
+    text-align: center;
+  }
 }
 
 * body #BotonesSubirArchivo #FotoTomada #TomarFoto i {
   color: white;
+}
+
+@media (min-width: 768px) {
+  * body #BotonesSubirArchivo #FotoTomada #TomarFoto i {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 
 * body #BotonesSubirArchivo #FotoTomada #File {
@@ -158,9 +229,22 @@
   margin-bottom: 30px;
 }
 
+@media (min-width: 768px) {
+  * body #FormDatosPaciente h1 {
+    font-size: 30px;
+  }
+}
+
 * body #FormDatosPaciente label {
   position: relative;
   margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  * body #FormDatosPaciente label {
+    font-size: 25px;
+    margin: 15px 0;
+  }
 }
 
 * body #FormDatosPaciente input {
@@ -174,6 +258,7 @@
   background: none;
   border-bottom: 2px solid #E88565;
   margin: 15px 0px;
+  font-size: 25px;
 }
 
 * body #FormDatosPaciente #RegistrarFoto {
@@ -193,17 +278,37 @@
   font-size: 30px;
 }
 
+@media (min-width: 768px) {
+  * body #FormDatosPaciente #RegistrarFoto #Fotografia i {
+    font-size: 50px;
+  }
+}
+
 * body #FormDatosPaciente #RegistrarFoto #Fotografia #FotoIn {
   width: 100%;
   height: 100%;
-  background: blue;
   opacity: 0;
+}
+
+@media (min-width: 768px) {
+  * body #FormDatosPaciente #RegistrarFoto #Fotografia #FotoIn {
+    position: absolute;
+    top: 0px;
+  }
 }
 
 * body #FormDatosPaciente #DivSexo {
   position: relative;
   padding: 0px;
   margin: 0px;
+}
+
+@media (min-width: 768px) {
+  * body #FormDatosPaciente #DivSexo {
+    font-size: 30px;
+    position: relative;
+    top: -20px;
+  }
 }
 
 * body #FormDatosPaciente #DivSexo #MasculinoGenero {
@@ -213,10 +318,25 @@
   top: 5px;
 }
 
+@media (min-width: 768px) {
+  * body #FormDatosPaciente #DivSexo #MasculinoGenero {
+    font-size: 30px;
+    position: relative;
+    top: 0px;
+  }
+}
+
 * body #FormDatosPaciente #DivSexo #MasculinoGenero label {
   position: absolute;
   top: 0px;
   left: 25px;
+}
+
+@media (min-width: 768px) {
+  * body #FormDatosPaciente #DivSexo #MasculinoGenero label {
+    font-size: 30px;
+    position: relative;
+  }
 }
 
 * body #FormDatosPaciente #DivSexo #FemeninoGenero {
@@ -226,15 +346,43 @@
   top: 5px;
 }
 
+@media (min-width: 768px) {
+  * body #FormDatosPaciente #DivSexo #FemeninoGenero {
+    font-size: 30px;
+    position: relative;
+    top: 0px;
+  }
+}
+
+* body #FormDatosPaciente #DivSexo #FemeninoGenero #SexoMIn {
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
 * body #FormDatosPaciente #DivSexo #FemeninoGenero label {
   position: absolute;
   top: 0px;
   left: 25px;
 }
 
+@media (min-width: 768px) {
+  * body #FormDatosPaciente #DivSexo #FemeninoGenero label {
+    font-size: 30px;
+    position: relative;
+  }
+}
+
 * body #FormDatosPaciente h2 {
   text-align: center;
   margin: 40px 0;
+}
+
+@media (min-width: 768px) {
+  * body #FormDatosPaciente h2 {
+    font-size: 30px;
+    border-top: 50px;
+  }
 }
 
 * body #FormDatosPaciente button {
@@ -246,6 +394,14 @@
   border: none;
   color: white;
   background: #E88565;
+}
+
+@media (min-width: 768px) {
+  * body #FormDatosPaciente button {
+    width: 45%;
+    height: 70px;
+    font-size: 25px;
+  }
 }
 
 * body #Out {
@@ -261,6 +417,15 @@
   font-size: 25px;
   position: relative;
   left: -20px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  * body #Out #Regresar {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+  }
 }
 
 * body #Out #Imagen {
@@ -271,6 +436,14 @@
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+}
+
+@media (min-width: 768px) {
+  * body #Out #Imagen {
+    width: 65%;
+  }
 }
 
 * body #Out #Imagen img {
@@ -283,8 +456,20 @@
   font-size: 20px;
 }
 
+@media (min-width: 768px) {
+  * body #Out #NombreOut, * body #Out #EdadOut {
+    font-size: 40px;
+  }
+}
+
 * body #Out #EdadOut {
   margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  * body #Out #EdadOut {
+    font-size: 40px;
+  }
 }
 
 * body #Out label {
@@ -292,6 +477,12 @@
   text-align: left;
   display: block;
   margin: 20px 0px;
+}
+
+@media (min-width: 768px) {
+  * body #Out label {
+    font-size: 30px;
+  }
 }
 
 * body #Out button {
@@ -305,9 +496,22 @@
   border-bottom: 1px solid #707070;
 }
 
+@media (min-width: 768px) {
+  * body #Out button {
+    font-size: 30px;
+  }
+}
+
 * body #Out .datos h5, * body #Out .datos label {
   display: inline-block;
   margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+  * body #Out .datos h5, * body #Out .datos label {
+    font-size: 30px;
+    margin: 30px 0px;
+  }
 }
 
 * body #Out #PersonalOut {
@@ -318,11 +522,23 @@
   margin: 5px 0;
 }
 
+@media (min-width: 768px) {
+  * body #Out #PersonalOut label {
+    font-size: 30px;
+  }
+}
+
 * body #Out #HistorialOut {
   display: none;
 }
 
 * body #Out #HistorialOut label {
   margin: 25px;
+}
+
+@media (min-width: 768px) {
+  * body #Out #HistorialOut label {
+    font-size: 30px;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */
