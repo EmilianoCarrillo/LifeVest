@@ -175,3 +175,9 @@ function regresarflecha(){
         $("#Out").css("display", "none");
     });
 }
+
+function cargando(){
+    PushSubscription.addEventListener("click", ()=>{
+
+    });
+}
