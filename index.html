@@ -15,7 +15,7 @@
 <body>
 
     <div id="Principal">
-        <img id="Principal" src="IMG/principal.jpeg" alt="">
+        <img id="PrincipalImg" src="IMG/principal.jpeg" alt="">
         <h1>LIFEVEST</h1>
         <h2>Tu seguridad nos importa</h2>
     </div>
@@ -45,7 +45,7 @@
 
         <label id="FechaNac" for="fechanac">Fecha De Nacimiento:</label>
         <br>
-        <input id="FechaNacIn" type="text" name="fechanac" placeholder="">
+        <input id="FechaNacIn" type="date" name="fechanac" placeholder="">
         <br>
 
         <label id="Direccion" for="direccion">Direccion:</label>
@@ -55,7 +55,7 @@
 
         <label id="Foto" for="direccion">Ingresa tu foto:</label>
         <br>
-        <input id="FotoIn" type="text">
+        <input id="FotoIn" type="file">
         <br>
 
         <div id="DivSexo">
@@ -141,28 +141,31 @@
     <!--Desde aqui-->
 
    <div id="Out">
-
-        <img id="FotoOut" src="" alt="">
+        
+        <div id="Imagen">
+            <img id="FotoOut" src="IMG/perfil.png" alt="">
+        </div>
+        
  
-        <label id="NombreOut" for=""></label>
-        <label id="EdadOut" for=""></label>
+        <label id="NombreOut" for="">Andrea Moncayo Riveroll</label>
+        <label id="EdadOut" for="">18</label>
  
-        <button>Personal</button>
-        <button>Historial</button>
+        <button id="BtnPersonal">Personal</button>
+        <button id="BtnHistorial">Historial</button>
  
         <div id="PersonalOut">
-            <label id="TelefonoOut" for=""></label>
-            <label id="DireccionOut" for=""></label>
-            <label id="GeneroOut" for=""></label>
+            <label id="TelefonoOut" for="">7351072718</l3abel>
+            <label id="DireccionOut" for="">Sanmiguel 633</label>
+            <label id="GeneroOut" for="">F</label>
  
         </div>
  
         <div id="HistorialOut">
-            <label id="TipoSangreOut" for=""></label>
-            <label id="AlergiasOut" for=""></label>
-            <label id="EnfermedadesOut" for=""></label>
-            <label id="EnfermedadesHerOut" for=""></label>
-            <label id="Medicamentos" for=""></label>
+            <label id="TipoSangreOut" for="">A+</label>
+            <label id="AlergiasOut" for="">Ninguna</label>
+            <label id="EnfermedadesOut" for="">Ninguna</label>
+            <label id="EnfermedadesHerOut" for="">Diabetes</label>
+            <label id="Medicamentos" for="">Ninguna</label>
             <label id="FechaInicioOut" for=""></label>
             <label id="FechaFinOut" for=""></label>
  

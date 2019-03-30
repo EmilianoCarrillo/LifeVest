@@ -1,19 +1,52 @@
 $(document).ready(inicio);
 
+//Botones
+
 var btnregistrar = document.getElementById("RegistrarPrincipal");
 var btnGuardar = document.getElementById("Guardar");
 var btnCancelar = document.getElementById("Cancelar");
+var BtnPersonal = document.getElementById("BtnPersonal");
+var BtnHistorial = document.getElementById("BtnHistorial")
+
+//Datos del Formulario
+var nombre = document.getElementById('NombreIn').value;
+var fechaNac = document.getElementById('FechaNacIn').value;
+var direccion = document.getElementById('DireccionIn').value;
+var foto = document.getElementById('FotoIn');
+var sexo = document.getElementById('SexoMIn');
+var nombreEm = document.getElementById('NombreEmergenciaIn').value;
+var telEmergencia = document.getElementById('TelEmergenciaIn').value;
+var parentescoEmergencia = document.getElementById('ParentescoEmergenciaIn').value;
+var tipoSangre = document.getElementById('TipoSangreIn').value;
+var alergia = document.getElementById('AlergiaIn').value;
+var enfermedad = document.getElementById('EnfermedadIn').value;
+var enfermedadHereditaria = document.getElementById('EnfermedadHereditariaIn').value;
+var medicamento = document.getElementById('MedicamentoIn').value;
+var fechaInicio = document.getElementById('FechaInicioIn').value;
+var fechaFin = document.getElementById('FechaFinIn').value;
+
 
 
 function inicio(){
+
+    var bandera = validar();
+
+    console.log(bandera);
+    
+
+    mostrardatospersonales();
+    mostrarhistorial();
 
     btnregistrar.addEventListener('click', () =>{
         ocultarpaginaprincipal();
         mostrarregistro();
     });
 
+    
+
     btnGuardar.addEventListener('click', ()=>{
-        validarcampos();
+        console.log(bandera);
+        
 
         
 
@@ -24,6 +57,8 @@ function inicio(){
         ocultarregistro();
 
     });
+
+    
 
 
 }
@@ -51,6 +86,22 @@ function mostrarinicio(){
 
 function ocultarregistro(){
     $("#FormDatosPaciente").css("display", "none");
+}
+
+function mostrardatospersonales(){
+
+    BtnPersonal.addEventListener('click', ()=>{
+        $("#PersonalOut").css("display", "block");
+        $("#HistorialOut").css("display", "none");
+
+    });
+}
+
+function mostrarhistorial(){
+    BtnHistorial.addEventListener('click', ()=>{
+        $("#PersonalOut").css("display", "none");
+        $("#HistorialOut").css("display", "block");
+    });
 }
 
 function validarcampos(){
@@ -87,3 +138,19 @@ function validarcampos(){
 
     });
 }
+
+function validar(){
+
+    if(nombre==" " || fechaNac==" " || direccion==" " || sexo=="" ||
+    nombreEm == " " || telEmergencia == " " || parentescoEmergencia ==" " ||
+    tipoSangre==" " || alergia==" " || enfermedad == "", enfermedadHereditaria == " " || 
+    medicamento == " " || fechaInicio == " " || fechaFin == ""){
+        return false;
+    }
+
+    else{
+        return true;
+    }
+
+}
+

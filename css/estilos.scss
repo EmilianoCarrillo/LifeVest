@@ -61,6 +61,10 @@ $escritorio: 950px;
        #Principal{
            width: 100%;
 
+           img{
+               width: 100%;
+           }
+
            h1{
                position: absolute;
                top: 0px;
@@ -86,6 +90,10 @@ $escritorio: 950px;
            h1{
                text-align: center;
            }
+           p{
+               margin: 15px 0px;
+               font-size: 14px;
+           }
        }
 
        #RegistrarPrincipal{
@@ -107,6 +115,7 @@ $escritorio: 950px;
            position: relative;
            left: 50%;
            transform: translate(-50%);
+           margin: 20px 0;
 
            h1{
                text-align: center;
@@ -169,7 +178,7 @@ $escritorio: 950px;
 
             h2{
                 text-align: center;
-                margin: 30px 0;
+                margin: 40px 0;
             }
 
             button{
@@ -189,6 +198,77 @@ $escritorio: 950px;
        }
 
        #Out{
+           width: 80%;
+           position: relative;
+           left: 50%;
+           transform: translate(-50%);
+        #Imagen{
+            
+            width: 80%;
+            position: relative;
+            margin: 20px 0;
+            margin-bottom: 30px;
+            left: 50%;
+            transform: translate(-50%);
+
+            img{
+                width: 100%;
+           
+            }
+ 
+        }
+           #NombreOut, #EdadOut{
+               text-align: center;
+               margin: 0;
+               font-size: 20px;
+           }
+           #EdadOut{
+               margin-bottom: 40px;
+           }
+
+           label{
+                position: relative;
+                text-align: left;
+                display: block;
+                margin: 20px 0px;
+                
+
+           }
+
+           button{
+                position: relative;
+                width: 45%;
+                height: 50px;
+                border: none;
+                cursor: pointer;
+                margin: 0px 0;
+                background: white;
+                border-bottom: 1px solid color(gris); 
+                        
+                
+           }
+
+           #PersonalOut{
+               
+
+               label{
+                   margin: 25px 0;
+
+               }
+           }
+
+           #HistorialOut{
+               display: none;
+
+               label{
+                   margin: 25px;
+               }
+           }
+
+
+
+
+
            
        }
 
