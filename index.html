@@ -53,7 +53,7 @@
     
     <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
 
-    <form id="FormDatosPaciente" action="POST" target="dummyframe">
+    <form id="FormDatosPaciente" target="dummyframe">
         <h1>Datos Personales</h1>
 
         <label id="Nombre" for="nombre">Nombre:</label>
@@ -156,7 +156,7 @@
         <br>
 
         <button id="Cancelar">Cancelar</button>
-        <button onsubmit="registrarPaciente()"  id="Guardar">Guardar</button>
+        <button onclick="registrarPaciente()"  id="Guardar">Guardar</button>
 
     </form>
 

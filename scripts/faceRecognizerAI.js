@@ -50,7 +50,7 @@ function getFaceAlike(source1,source2){
                   data: '{"faceId1":"' + id_1 + '", "faceId2":"' + id_2 + '"}',
               })
               .done(function(data3) {
-                  console.log(data3);
+                  console.log(data3, source1, source2);
               })
               .fail(function(jqXHR, textStatus, errorThrown) {
                   // Display error message.
